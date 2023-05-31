@@ -1,0 +1,22 @@
+//CODE TO UPDATE A RECORD USING SESSION INTERFACE():
+package org.jsp.hibernate_demo;
+
+
+
+public class UpdateUser {
+	public static void main(String[] args) {
+		User u = new User();
+		u.setId(1);
+		u.setName("raju");
+		u.setPassword("p456");
+		u.setPhone(9865244l);
+		Session s = new Configuration().configure().buildSessionFactory().openSession();
+		Transaction t = s.beginTransaction();
+		s.update(u);
+		t.commit();
+	}
+}
+//UPDATE OBJECT():
+//-> THIS METHOD IS PRESENT IN SESSION INTERFACE.
+//->IT IS USED TO UPDATE A PARSISTANCE OBJECT(PRESENT IN THE INTERFACE).
+//WITH THE GIVEN IDENTIFY IF IT IS PRESENT,OTHER WISE IT WILL THROUGH AN EXCEPTION.

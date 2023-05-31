@@ -1,0 +1,14 @@
+package org.jsp.hibernate_demo;
+
+import org.hibernate.Session;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
+
+public class FetchAllUsers {
+	public static void main(String[] args) {
+		Session s=new Configuration().configure().buildSessionFactory().openSession();
+		Query<User> q=s.createQuery("selest u from User u");
+		List
+	}
+
+}
